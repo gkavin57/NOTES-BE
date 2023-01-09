@@ -14,12 +14,12 @@ app.use(cors());
 app.use("/users", userRouter);
 app.use("/api/notes", noteRouter);
 
+app.get("/", (req, res) => {
+  res.send("welcome to my Notes App");
+});
+
 //Port Listing;
 const PORT = 7000;
 app.listen(process.env.PORT || PORT, () => {
   console.log("Port is Running on " + PORT);
-
-  app.get("/", (req, res) => {
-    res.send("welcome to my Notes App");
-  });
 });
