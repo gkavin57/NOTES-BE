@@ -20,6 +20,6 @@ app.listen(process.env.PORT || PORT, () => {
   console.log("Port is Running on " + PORT);
 
   app.get("/", (req, res) => {
-    res.send("helo");
+    res.send("welcome to my Notes App");
   });
 });
